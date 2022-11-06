@@ -26,7 +26,7 @@ pip install -r requirements.txt
 ### Run the scrapper
 
 ```bash
-python main.py
+python3 main.py "https://www.amazon.co.uk/Apple-iPhone-13-128GB-Starlight/dp/B09G9FB7LV/ref=cm_cr_arp_d_product_top?ie=UTF8"
 ```
 
 ### Run unit tests
