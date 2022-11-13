@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="container mx-auto h-screen">
+        <div class="flex flex-col justify-center items-center h-full">
+            <div class="main text-center w-full">
+                <h1 class="text-4xl font-bold">Enter Product URL</h1>
+                <!-- <p class="text-gray-500">Example:
+                    `https://www.amazon.co.uk/Apple-iPhone-13-128GB-Starlight/dp/B09G9FB7LV/ref=cm_cr_arp_d_product_top`
+                </p> -->
+                <p class="text-xs text-gray-500">Note: Only amazon urls are supported for now</p>
+                <form class="w-full" method="post" action="/enter-product-url">
+                    {% csrf_token %}
+                    <div class="flex justify-center">
+                        <input type="text" name="url" id="url" class="w-1/2 border-2 border-gray-300 p-2 rounded-lg"
+                            placeholder="Enter URL" required>
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Submit</button>
+
+                    </div>
+                </form>
+            </div>
+            <div class="loader-section hidden">
+                <h1 class="text-4xl font-bold">Running the analysis in realtime</h1>
+                <p class="text-xs text-gray-500 text-center">Please wait...</p>
+                <div
+                    class="loader ease-linear rounded-full border-2 border-t-2 border-gray-200 h-8 w-8 my-4 text-center">
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Loading spinner -->
+        <style>
+            .loader {
+                border-top-color: #5534db;
+                -webkit-animation: spinner 1.5s linear infinite;
+                animation: spinner 1.5s linear infinite;
+            }
+
+            @-webkit-keyframes spinner {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+
+            @keyframes spinner {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+
+        <script>
+
+            const url = document.querySelector('#url');
+            const loader = document.querySelector('.loader-section');
+            const main = document.querySelector('.main');
+            const form = document.querySelector('form');
+
+            // form.addEventListener('submit', (e) => {
+            //     e.preventDefault();
+            //     loader.classList.remove('hidden');
+            //     main.classList.add('hidden');
+            // })
+
+
+            // JavaScript function to get cookie by name; retrieved from https://docs.djangoproject.com/en/3.1/ref/csrf/
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+        </script>
+</body>
+
+</html>
