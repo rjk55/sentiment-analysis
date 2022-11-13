@@ -1,21 +1,34 @@
 import typing
 import textblob
-
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 
 def find_percentage(part, whole):
     # Round to 2 decimal places
     return round(100 * float(part) / float(whole), 2)
 
 
-def analyze_polarity(text: typing.List[str]):
+def analyze_polarity(sentence_list: typing.List[str]):
     """Analyze polarity"""
     positive = 0
     negative = 0
     neutral = 0
     polarity = 0
 
-    for sentence in text:
-        analysis = textblob.TextBlob(sentence)
+    len_of_sentence_list = len(sentence_list)
+
+    # The stopwords are a list of words that are very very common but don’t provide 
+    # useful information for most text analysis procedures.
+    stop_words = set(stopwords.words("english"))
+
+    for sentence in sentence_list:
+        # word tokenize breaks down the sentence into a list of words
+        word_tokens = nltk.word_tokenize(sentence)
+
+        filtered_sentence = [w for w in word_tokens if not w in stop_words]
+
+        analysis = textblob.TextBlob(" ".join(filtered_sentence))
         polarity += analysis.sentiment.polarity
 
         if analysis.sentiment.polarity == 0:
@@ -25,18 +38,14 @@ def analyze_polarity(text: typing.List[str]):
         elif analysis.sentiment.polarity > 0.00:
             positive += 1
 
-    # print(f"Positive: {positive}")
-    # print(f"Negative: {negative}")
-    # print(f"Neutral: {neutral}")
-    # print(f"Polarity: {polarity}")
-    # print("\n------------------\n")
-
-    positive = find_percentage(positive, len(text))
-    negative = find_percentage(negative, len(text))
-    neutral = find_percentage(neutral, len(text))
-    polarity = polarity / len(text)
-
-    print(f"Positive: {positive}%")
-    print(f"Negative: {negative}%")
-    print(f"Neutral: {neutral}%")
-    print(f"Polarity: {polarity}%")
+    positive = find_percentage(positive, len_of_sentence_list)
+    negative = find_percentage(negative, len_of_sentence_list)
+    neutral = find_percentage(neutral, len_of_sentence_list)
+    polarity = find_percentage(polarity, len_of_sentence_list)
+    
+    return {
+        "positive": positive,
+        "negative": negative,
+        "neutral": neutral,
+        "polarity": polarity,
+    }
