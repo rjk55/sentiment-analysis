@@ -109,9 +109,10 @@ class AmazonScrapper(BaseScrapper):
             for review in reviews:
                 author = review.find("span", {"class": "a-profile-name"}).text
                 rating = review.find("span", {"class": "a-icon-alt"}).text
-                title = (
-                    review.find("a", {"data-hook": "review-title"}).text.strip() or None
-                )
+                try:
+                    title = review.find("a", {"data-hook": "review-title"}).text.strip()
+                except AttributeError:
+                    title = ""
 
                 place_and_date = soup.find(
                     "span", {"data-hook": "review-date"}
