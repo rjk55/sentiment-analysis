@@ -158,7 +158,7 @@ class AmazonScrapper(BaseScrapper):
         return {
             "title": self.get_product_title(),
             "rating": self.get_rating(),
-            "aize": self.get_size(),
+            "size": self.get_size(),
             "color": self.get_color(),
             "global_ratings": self.number_of_global_ratings(),
             "price": self.get_price(),
