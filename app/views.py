@@ -23,4 +23,7 @@ class EnterProductURLView(View):
         for review in reviews:
             text.append("".join(review["title"] + review["content"]))
         polarity = analyze_polarity(text)
-        return render(request, 'results.html', {"polarity": polarity})
+
+        # Convert values to a list
+        sentiment = [polarity["positive"], polarity["negative"], polarity["neutral"]]
+        return render(request, 'results.html', {"sentiment": sentiment, "product_detail": product_detail})
