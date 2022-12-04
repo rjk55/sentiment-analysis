@@ -49,3 +49,13 @@ def analyze_polarity(sentence_list: typing.List[str]):
         "neutral": neutral,
         "polarity": polarity,
     }
+
+# Fake review detection
+# There are various ways to detect fake reviews.
+# Here we are using some simple methods to detect fake reviews.
+# 1. Coherence - "evaluates whether the assigned rating is in accordance with the opinions expressed in the review's text."
+#     eg: If the review is 5 star, then the review should be positive. or if the review is 1 star, then the review should be negative.
+# 2. Filtering verified purchases 
+# 3. Filtering reviews that too short or too long - This is useful to filter reviews that posted by bots.
+# 4. Author - Check the author name. If the author name is not a real name, then it is a fake review.
+#    eg: It's very common to see fake reviews with names like "Amazon Customer", "Anonymous", or false names like a single letter or a number.
