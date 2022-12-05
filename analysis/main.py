@@ -3,6 +3,8 @@ import textblob
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from textblob import TextBlob
+import pandas as pd
 
 def find_percentage(part, whole):
     # Round to 2 decimal places
@@ -50,12 +52,53 @@ def analyze_polarity(sentence_list: typing.List[str]):
         "polarity": polarity,
     }
 
-# Fake review detection
-# There are various ways to detect fake reviews.
-# Here we are using some simple methods to detect fake reviews.
-# 1. Coherence - "evaluates whether the assigned rating is in accordance with the opinions expressed in the review's text."
-#     eg: If the review is 5 star, then the review should be positive. or if the review is 1 star, then the review should be negative.
-# 2. Filtering verified purchases 
-# 3. Filtering reviews that too short or too long - This is useful to filter reviews that posted by bots.
-# 4. Author - Check the author name. If the author name is not a real name, then it is a fake review.
-#    eg: It's very common to see fake reviews with names like "Amazon Customer", "Anonymous", or false names like a single letter or a number.
+def tokenize(sentence:str) -> str:
+    return word_tokenize(sentence)
+
+def remove_stopwords(sentence:str) -> list:
+    stop_words = set(stopwords.words('english'))
+    word_tokens = tokenize(sentence)
+    filtered_sentence = [w for w in word_tokens if not w in stop_words]
+    return filtered_sentence
+
+def get_sentiment(sentence:str) -> float:
+    analysis = TextBlob(sentence)
+    return analysis.sentiment.polarity
+
+def get_coherence(sentiment:float, rating:int) -> bool:
+    if sentiment > 0 and rating >= 4:
+        return True
+    elif sentiment < 0 and rating <= 2:
+        return True
+    else:
+        return False
+
+
+def process_data(reviews:typing.List[dict]):
+    # Fake review detection
+    # There are various ways to detect fake reviews.
+    # Here we are using some simple methods to detect fake reviews.
+    # 1. Coherence - "evaluates whether the assigned rating is in accordance with the opinions expressed in the review's text."
+    #     eg: If the review is 5 star, then the review should be positive. or if the review is 1 star, then the review should be negative.
+    # 2. Filtering verified purchases 
+    # 3. Filtering reviews that too short or too long - This is useful to filter reviews that posted by bots.
+    # 4. Author - Check the author name. If the author name is not a real name, then it is a fake review.
+    #    eg: It's very common to see fake reviews with names like "Amazon Customer", "Anonymous", or false names like a single letter or a number.
+
+    df = pd.DataFrame(reviews)
+
+    # Joining review title and review content and adding it to a new column
+    df["Full Sentence"] = df[["title", "content"]].agg(". ".join, axis=1)
+
+    # Removing stopwords and converting the sentence to a list of token words
+    tokens = df['Full Sentence'].apply(lambda x: remove_stopwords(x))
+    df['Word Tokens'] = tokens
+
+    # Getting the sentiment of each review
+    df['Sentiment Score'] = df["tokens"].apply(lambda x: get_sentiment(" ".join(x)))
+
+    # Checking if the sentiment is in accordance with the rating
+    df['Coherence'] = df.apply(lambda x: get_coherence(x['sentiment'], int(x['rating'][0])), axis=1)
+
+
+
