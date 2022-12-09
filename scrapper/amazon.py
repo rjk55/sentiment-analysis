@@ -137,7 +137,11 @@ class AmazonScrapper(BaseScrapper):
                     )
                 except AttributeError:
                     verified_purchase = False
-                content = review.find("span", {"data-hook": "review-body"}).span.text
+
+                try:
+                    content = review.find("span", {"data-hook": "review-body"}).text
+                except AttributeError:
+                    content = ""
 
                 user_reviews.append(
                     {

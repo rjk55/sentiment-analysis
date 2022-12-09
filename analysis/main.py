@@ -1,10 +1,13 @@
 import typing
+from typing import List
 import textblob
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from textblob import TextBlob
 import pandas as pd
+
+
 
 def find_percentage(part, whole):
     # Round to 2 decimal places
@@ -73,6 +76,20 @@ def get_coherence(sentiment:float, rating:int) -> bool:
     else:
         return False
 
+def get_negative_count(tokens:List[List[str]]) -> List[int]:
+    """
+    Get the number of negative words in the review
+    Args: accepts a list of list of words
+    Returns: a list of number of negative words in each review
+    """
+    negative_count = []
+    for token in tokens:
+        neg = 0
+        for word in token:
+            testimonial = TextBlob(word)
+            if testimonial.sentiment.polarity < 0:
+                neg += 1
+        negative_count.append(neg)
 
 def process_data(reviews:typing.List[dict]):
     # Fake review detection
@@ -87,8 +104,25 @@ def process_data(reviews:typing.List[dict]):
 
     df = pd.DataFrame(reviews)
 
+    # TODO: clean the dataset
     # Joining review title and review content and adding it to a new column
     df["Full Sentence"] = df[["title", "content"]].agg(". ".join, axis=1)
+
+    # Removing emojis from the review
+    df["Full Sentence"] = df["Full Sentence"].apply(lambda x: x.encode("ascii", "ignore").decode())
+
+    # Formatting the rating (eg: 5.0 out of 5 stars to 5.0)
+    df["rating"].apply(lambda x: x.split(" ")[0]).astype(float)
+
+    # Remove special characters
+    # \W represents any non-word character
+    df["Full Sentence"] = df["Full Sentence"].str.replace("\W", " ")
+
+    # \d represents Numeric digits
+    df["Full Sentence"] = df["Full Sentence"].str.replace("\d", " ")
+
+    # Upper case to lower case
+    df["Full Sentence"] = df["Full Sentence"].str.lower()
 
     # Removing stopwords and converting the sentence to a list of token words
     tokens = df['Full Sentence'].apply(lambda x: remove_stopwords(x))
@@ -100,5 +134,15 @@ def process_data(reviews:typing.List[dict]):
     # Checking if the sentiment is in accordance with the rating
     df['Coherence'] = df.apply(lambda x: get_coherence(x['sentiment'], int(x['rating'][0])), axis=1)
 
+    # Number of negative words in the review
+    df['Neg Count'] = get_negative_count(df['Word Tokens'].to_list())
 
+    # Unique words count
+    unique_words = []
 
+    for token in df['Word Tokens'].to_list():
+        unique_words.append(len(set([t.lower() for t in token])))    
+
+    df['Unique_Words'] = unique_words
+
+  
