@@ -19,11 +19,8 @@ class EnterProductURLView(View):
         scrapper = AmazonScrapper(url)
         product_detail = scrapper.product_detail()
         reviews = product_detail["reviews"]
-        text = []
-        for review in reviews:
-            text.append("".join(review["title"] + review["content"]))
-        polarity = analyze_polarity(text)
 
-        # Convert values to a list
-        sentiment = [polarity["positive"], polarity["negative"], polarity["neutral"]]
+        # convert tuple to list
+        sentiment = list(analyze_polarity(reviews))
+        logger.info("Sentiment: %s", sentiment)
         return render(request, 'results.html', {"sentiment": sentiment, "product_detail": product_detail})
