@@ -29,6 +29,9 @@ def get_coherence(sentiment:float, rating:int) -> bool:
         return True
     elif sentiment < 0 and rating <= 2:
         return True
+
+    elif sentiment == 0:
+        return True
     else:
         return False
 
@@ -56,7 +59,7 @@ def process_reviews(reviews:List[dict]):
     #     eg: If the review is 5 star, then the review should be positive. or if the review is 1 star, then the review should be negative.
     # 2. Filtering verified purchases 
     # 3. Filtering reviews that too short or too long - This is useful to filter reviews that posted by bots.
-    # 4. Author - Check the author name. If the author name is not a real name, then it is a fake review.
+    # 4. Author TODO: - Check the author name. If the author name is not a real name, then it is a fake review.
     #    eg: It's very common to see fake reviews with names like "Amazon Customer", "Anonymous", or false names like a single letter or a number.
 
     df = pd.DataFrame(reviews)
@@ -101,7 +104,7 @@ def process_reviews(reviews:List[dict]):
 
     df['Unique_Words'] = unique_words
 
-    df["Authenticity"] = df.apply(lambda x: x['Coherence'] and x['verified_purchase'] and x['Neg Count'] < 3 and x['Unique_Words'] > 3, axis=1)
+    df["Authenticity"] = df.apply(lambda x: x['Coherence'] and x['verified_purchase'] and x['Unique_Words'] > 3, axis=1)
 
     return df
 
