@@ -29,7 +29,6 @@ def get_coherence(sentiment:float, rating:int) -> bool:
         return True
     elif sentiment < 0 and rating <= 2:
         return True
-
     elif sentiment == 0:
         return True
     else:
@@ -117,11 +116,12 @@ def analyze_polarity(reviews:List[dict]) -> Tuple[float, float, float, float]:
     polarity = 0
     
     df = process_reviews(reviews)
-    # total number of reviews
-    total = len(df["Full Sentence"])
 
     # Get sentiment score where authenticity is True
     sentiment_score = df[df["Authenticity"] == True]["Sentiment Score"].to_list()
+
+    # total number of reviews
+    total = len(sentiment_score)
 
     for score in sentiment_score:
         # adding up polarities by adding positive, negative and neutral reviews
