@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.views import View
-from scrapper.amazon import AmazonScrapper
+from scrapper.base import Scrapper, get_scrapper
 from analysis.main import analyze_polarity
 import logging
 
@@ -16,8 +16,10 @@ class EnterProductURLView(View):
     def post(self, request):
         url = request.POST["url"]
         logger.info("Received URL: %s", url)
-        scrapper = AmazonScrapper(url)
-        product_detail = scrapper.product_detail()
+        
+        scrapper_class = get_scrapper(url)
+        scrapper = scrapper_class(url)
+        product_detail = scrapper.get_product_details()
         reviews = product_detail["reviews"]
 
         # convert tuple to list
