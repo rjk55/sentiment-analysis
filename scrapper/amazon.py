@@ -1,12 +1,12 @@
 import logging
-from scrapper.base import BaseScrapper
+from scrapper.base import Scrapper
 import dataclasses, typing
 
 logger = logging.getLogger(__name__)
 
 
 @dataclasses.dataclass
-class AmazonScrapper(BaseScrapper):
+class AmazonScrapper(Scrapper):
     """Scrapes Amazon product details."""
 
     RECENT = "recent"
@@ -69,13 +69,14 @@ class AmazonScrapper(BaseScrapper):
             reviews_page_url = self.soup.find(
                 "a", {"data-hook": "see-all-reviews-link-foot"}
             ).get("href")
-            return f"https://{self.get_base_url}{reviews_page_url}"
+            return f"{self.base_url}{reviews_page_url}"
         except AttributeError:
             raise AttributeError("There are no reviews for this product.")
 
     def review_page_urls(self, sort_by: str = RECENT):
         """Returns the review details."""
         all_reviews_url = self.get_all_reviews_url()
+        print("all_reviews_url", all_reviews_url)
         all_reviews_url += f"&sortBy={sort_by}"
 
         # Get all reviews page
@@ -157,7 +158,7 @@ class AmazonScrapper(BaseScrapper):
                 )
         return user_reviews
 
-    def product_detail(self):
+    def get_product_details(self):
         reviews = self.reviews(self.review_page_urls())
         return {
             "title": self.get_product_title(),
