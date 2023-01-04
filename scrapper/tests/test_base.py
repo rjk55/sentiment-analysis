@@ -1,65 +1,39 @@
-from scrapper.base import BaseScrapper
-import unittest
-import requests_mock
+from unittest import TestCase, mock
+from scrapper.base import Scrapper
+class TestScrapper(TestCase):
+    """Test base scrapper"""
+
+    def setUp(self):
+        self.amazon_iphone_url = "https://www.amazon.co.uk/Apple-iPhone-13-128GB-Starlight/dp/B09G9FB7LV/ref=cm_cr_arp_d_product_top?ie=UTF8"
 
 
-class TestBaseScrapper(unittest.TestCase):
-    """Test BaseScrapper class"""
+    def test_base_url_is_returned_correctly(self):
+        """Test base url is returned correctly"""
+        self.assertEqual(Scrapper.get_base_url("https://www.amazon.com"), "www.amazon.com")
+        self.assertEqual(Scrapper.get_base_url("https://www.amazon.co.uk"), "www.amazon.co.uk")
+        self.assertEqual(Scrapper.get_base_url("https://www.flipkart.com"), "www.flipkart.com")
+        self.assertEqual(Scrapper.get_base_url("https://www.argos.co.uk"), "www.argos.co.uk")
 
-    @classmethod
-    def setUp(cls) -> None:
-        cls.url = "https://www.amazon.com"
-        cls.response_text = """<html>
-            <title>Amazon</title>
-            <body><h1>Amazon</h1></body></html>"""
+    def test_scrapper_class_is_returned_correctly(self):
+        """Test scrapper class is returned correctly"""
 
-    def test_soup_cannot_be_initialized(self):
-        """Test soup is not initialized"""
-        with self.assertRaises(TypeError) as ctx:
-            BaseScrapper(url=self.url, soup="soup")
+        from scrapper.amazon import AmazonScrapper
 
-        excepted_msg = "__init__() got an unexpected keyword argument 'soup'"
-        self.assertEqual(ctx.exception.args[0], excepted_msg)
+        self.assertEqual(Scrapper.get_scrapper("https://www.amazon.co.uk/Apple-iPhone-13-128GB-Starlight/dp/B09G9FB7LV/ref=cm_cr_arp_d_product_top?ie=UTF8"), AmazonScrapper)
 
-    def test_default_header(self):
-        """Test default header"""
-        base_scrapper = BaseScrapper(url=self.url)
-        self.assertEqual(
-            base_scrapper.header,
-            {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36"
-            },
-        )
+    
+    def test_get_scrapper_returns_none_if_no_scrapper_is_found(self):
+        """Test get scrapper returns none if no scrapper is found"""
+        self.assertIsNone(Scrapper.get_scrapper("https://www.google.com"))
 
-    def test_custom_header(self):
-        """Test custom header"""
-        header = {
-            "User-Agent": "Custom User Agent",
-        }
-        base_scrapper = BaseScrapper(url=self.url, header=header)
-        self.assertEqual(base_scrapper.header, header)
-
-    def test_get_base_url(self):
-        """Test get_base_url"""
-        base_scrapper = BaseScrapper(url=self.url)
-        self.assertEqual(base_scrapper.get_base_url, "www.amazon.com")
-
-    @requests_mock.Mocker()
-    def test_get_html(self, mocked_request):
-        """Test get_html"""
-
-        mocked_request.get(self.url, text=self.response_text)
-        base_scrapper = BaseScrapper(url=self.url)
-
-        response = base_scrapper.get_html(url=self.url)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.text, self.response_text)
-
-    @requests_mock.Mocker()
-    def test_get_soup(self, mocked_request):
-        """Test response is parsed to soup"""
-
-        mocked_request.get(self.url, text=self.response_text)
-        base_scrapper = BaseScrapper(url=self.url)
-        soup = base_scrapper.get_soup(url=self.url)
-        self.assertEqual(soup.title.text, "Amazon")
+  
+    def test_scraped_data_is_returned_for_valid_url(self,):
+        """Test data is returned for valid url"""
+    
+        with mock.patch.object(
+                Scrapper, "get_product_details", return_value={"title": "test"}
+            ):
+                self.assertEqual(
+                    Scrapper.get_product_details(self.amazon_iphone_url),
+                    {"title": "test"},
+                )

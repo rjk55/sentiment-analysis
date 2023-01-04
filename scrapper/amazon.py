@@ -76,7 +76,6 @@ class AmazonScrapper(Scrapper):
     def review_page_urls(self, sort_by: str = RECENT):
         """Returns the review details."""
         all_reviews_url = self.get_all_reviews_url()
-        print("all_reviews_url", all_reviews_url)
         all_reviews_url += f"&sortBy={sort_by}"
 
         # Get all reviews page
