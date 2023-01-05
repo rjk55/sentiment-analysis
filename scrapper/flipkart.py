@@ -73,29 +73,43 @@ class Flipkart(Scrapper):
         all_reviews = []
 
         for page_url in all_page_urls:
-            # print(page_url)
             soup = self.get_soup(page_url)
             try:
-                all_reviews.append(self.extract_reviews(soup))
+                all_reviews.extend(self.extract_reviews(soup))
             except Exception as e:
                 logger.error("Error while extracting reviews: %s", e)
                 continue
 
-        
         return all_reviews
 
     def extract_reviews(self, soup)->Review:
         """Extracts reviews from the soup object."""
-        wrapper_div = soup.find("div", {"class": "col _2wzgFH K0kLPL"})
-        rating = wrapper_div.find("div", {"class": "_3LWZlK _1BLPMq"}).text
-        review_heading = wrapper_div.find("p", {"class": "_2-N8zT"}).text
-        review_text = wrapper_div.find("div", {"class": "t-ZTKy"}).div.div.text
-        author = wrapper_div.find("p", {"class": "_2sc7ZR _2V5EHH"}).text
-        certified_buyer = wrapper_div.find("p", {"class": "_2mcZGG"})
-        verified_purchase = certified_buyer and certified_buyer.span.text == "Certified Buyer"
-        return Review(rating=rating, title=review_heading, content=review_text, 
-            author=author,verified_purchase=verified_purchase
-        )
+        wrapper_divs = soup.find_all("div", {"class": "col _2wzgFH K0kLPL"})
+        reviews = []
+        count = 0
+        for wrapper_div in wrapper_divs:
+            count += 1
+            rating = None
+            possible_classes = ["_3LWZlK _1BLPMq", "_3LWZlK _1rdVr6 _1BLPMq","_3LWZlK _32lA32 _1BLPMq"]
+            while rating is None:
+                for possible_class in possible_classes:
+                    rating = wrapper_div.find("div", {"class": possible_class})
+                    if rating is not None:
+                        break
+                    
+            rating = rating.text                
+            review_heading = wrapper_div.find("p", {"class": "_2-N8zT"}).text
+            review_text = wrapper_div.find("div", {"class": "t-ZTKy"}).div.div.text
+            author = wrapper_div.find("p", {"class": "_2sc7ZR _2V5EHH"}).text
+            certified_buyer = wrapper_div.find("p", {"class": "_2mcZGG"})
+            verified_purchase = certified_buyer and certified_buyer.span.text == "Certified Buyer"
+
+            reviews.append(
+                Review(rating=rating, title=review_heading, content=review_text,
+                          author=author, verified_purchase=verified_purchase)
+            )
+        return reviews
+
 
     def get_number_of_pages(self, soup):
         """Returns the number of pages containing reviews."""

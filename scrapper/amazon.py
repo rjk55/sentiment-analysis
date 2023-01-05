@@ -108,7 +108,8 @@ class AmazonScrapper(Scrapper):
 
             for review in reviews:
                 author = review.find("span", {"class": "a-profile-name"}).text
-                rating = review.find("span", {"class": "a-icon-alt"}).text
+                rating = review.find("span", {"class": "a-icon-alt"}).text.split(" ")[0]
+                rating = float(rating)
                 try:
                     title = review.find("a", {"data-hook": "review-title"}).text.strip()
                 except AttributeError:

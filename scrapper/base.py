@@ -15,7 +15,6 @@ def get_scrapper(url: str):
 
     # Extract the market place from the url e.g. amazon, ebay, flipkart etc
     market_place = Scrapper.get_base_url(url).split(".")[1]
-    print(market_place)
 
     scrappers = {
         MarketPlace.AMAZON: AmazonScrapper,

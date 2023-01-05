@@ -71,7 +71,7 @@ def process_reviews(reviews:List[dict]):
     df["Full Sentence"] = df["Full Sentence"].apply(lambda x: x.encode("ascii", "ignore").decode())
 
     # Formatting the rating (eg: 5.0 out of 5 stars to 5.0)
-    df["rating"].apply(lambda x: x.split(" ")[0]).astype(float)
+    df["rating"].apply(lambda x: str(x).split(" ")[0]).astype(float)
 
     # Remove special characters
     # \W represents any non-word character
@@ -90,7 +90,7 @@ def process_reviews(reviews:List[dict]):
     df['Sentiment Score'] = df["Word Tokens"].apply(lambda x: get_sentiment(" ".join(x)))
 
     # Checking if the sentiment is in accordance with the rating
-    df['Coherence'] = df.apply(lambda x: get_coherence(x['Sentiment Score'], int(x['rating'][0])), axis=1)
+    df['Coherence'] = df.apply(lambda x: get_coherence(x['Sentiment Score'], int(x['rating'])), axis=1)
 
     # Number of negative words in the review
     df['Neg Count'] = get_negative_count(df['Word Tokens'].to_list())
