@@ -161,7 +161,7 @@ class AmazonScrapper(Scrapper):
     def get_product_details(self):
         reviews = self.reviews(self.review_page_urls())
         return {
-            "title": self.get_product_title(),
+            "name": self.get_product_title(),
             "rating": self.get_rating(),
             "size": self.get_size(),
             "color": self.get_color(),
