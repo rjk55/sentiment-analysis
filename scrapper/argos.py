@@ -30,7 +30,6 @@ class Argos(Scrapper):
     def get_price(self):
         """Returns the price of the product."""
         try:
-            print(self.soup.find("li", {"data-test":"product-price-primary"}).h2.text.strip())
             return self.soup.find("li", {"data-test":"product-price-primary"}).h2.text.strip()
         except IndexError:
             return None

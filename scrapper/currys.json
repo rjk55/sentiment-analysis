@@ -1,0 +1,523 @@
+{
+  "configuration": {
+    "show_brand": true,
+    "show_footer": true,
+    "show_older_reviews": true,
+    "show_demographic_info": true,
+    "helpfulness_voting": "/reevoomark/votes/en-GB/---id---?vote=---vote---",
+    "multi_country_region_is_available": false,
+    "current_region_is_multi_country": false,
+    "older_reviews_available": false,
+    "flags_enabled": true,
+    "social_enabled": true,
+    "stars_enabled": true,
+    "stars_in_facets": false,
+    "scores_in_facets": true
+  },
+  "header": {
+    "title": "Apple 13.3\" MacBook Air with Retina Display (2020) - Intel Core i3, 256 GB SSD, Space Grey reviews verified by <span class='reevoo-name'>reevoo</span><reevoo-quotes/>",
+    "product_image": "https://images.reevoo.com/retailer_products/1175153/1175153049/130x130.jpg?fingerprint=a28fc387e24b7ea1eddc13f3986d0b72a8b9ee25",
+    "show_product_image": false,
+    "num_of_reviews": "3,636 reviews",
+    "average_score": "9.4",
+    "facets": [
+      { "name": "Design", "score": 9.6 },
+      { "name": "Battery life", "score": 9.3 },
+      { "name": "Size and weight", "score": 9.6 },
+      { "name": "Performance", "score": 9.4 },
+      { "name": "Value for money", "score": 8.6 },
+      { "name": "Overall rating", "score": 9.4 }
+    ],
+    "slider_facets": [],
+    "region_list": [["My country and language (3,636 reviews)", "my-locale"]]
+  },
+  "body": {
+    "filter_bar": {
+      "show_scores": {
+        "show_text": "Show all scores",
+        "hide_text": "Hide all scores"
+      },
+      "filters_text": "Reviews from:",
+      "filter_all": "All purchasers",
+      "filters": [
+        ["Business user", "business-user"],
+        ["Creative", "creative"],
+        ["Gamer", "gamer"],
+        ["General home user", "general-home-user"],
+        ["Student", "student"],
+        ["other", "other"]
+      ],
+      "sort_text": "Sort by:",
+      "sorters": [
+        ["My language first", "language"],
+        ["Most recent", "recent"],
+        ["Most helpful", "helpful"],
+        ["Lowest score", "score_asc"],
+        ["Highest score", "score_desc"]
+      ],
+      "default_sorter": "language"
+    },
+    "reviews": [
+      {
+        "id": 36791576,
+        "supplementary_info": null,
+        "overall_score": 8,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Mariam",
+          "location": "Leeds",
+          "segment": "Student"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-12-01",
+        "publish_date": "2023-01-02",
+        "text": {
+          "good_points": "Easy to use as a first time MacBook user \nOpening and download files with ease",
+          "bad_points": "A bit heavier than I would’ve imagined"
+        },
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 7.0 },
+          { "name": "Size and weight", "score": 7.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 7.0 },
+          { "name": "Overall rating", "score": 8.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 36764316,
+        "supplementary_info": null,
+        "overall_score": 10,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Dev",
+          "location": "London",
+          "segment": "General home user"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-11-29",
+        "publish_date": "2022-12-31",
+        "text": { "good_points": "All good", "bad_points": "negative" },
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 9.0 },
+          { "name": "Battery life", "score": 9.0 },
+          { "name": "Size and weight", "score": 9.0 },
+          { "name": "Performance", "score": 9.0 },
+          { "name": "Value for money", "score": 9.0 },
+          { "name": "Overall rating", "score": 10.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 36759929,
+        "supplementary_info": null,
+        "overall_score": 9,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Marlow",
+          "location": null,
+          "segment": "General home user"
+        },
+        "fast_responses": [],
+        "purchase_date": "2021-11-25",
+        "publish_date": "2022-12-31",
+        "text": {
+          "good_points": "Beautiful screen\nGreat battery life\nLightweight\nBest laptop that I have owned\nHigh performance",
+          "bad_points": "Screen could be bigger\nPricey"
+        },
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 9.0 },
+          { "name": "Size and weight", "score": 9.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 8.0 },
+          { "name": "Overall rating", "score": 9.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 36749019,
+        "supplementary_info": null,
+        "overall_score": 9,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Alan",
+          "location": null,
+          "segment": "General home user"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-11-28",
+        "publish_date": "2022-12-30",
+        "text": {
+          "good_points": "Nice light easy to carry about quick start up",
+          "bad_points": "Battery and  price"
+        },
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 8.0 },
+          { "name": "Overall rating", "score": 9.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 36728467,
+        "supplementary_info": null,
+        "overall_score": 9,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Robert",
+          "location": "Lancaster",
+          "segment": "Student"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-11-27",
+        "publish_date": "2022-12-29",
+        "text": {
+          "good_points": "Always a treat - intuitively straightforward with all the Apple elements we love",
+          "bad_points": "Not really - maybe the price?"
+        },
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 8.0 },
+          { "name": "Size and weight", "score": 9.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 7.0 },
+          { "name": "Overall rating", "score": 9.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 36679636,
+        "supplementary_info": null,
+        "overall_score": 10,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Victoria",
+          "location": "Walsall",
+          "segment": "Student"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-11-24",
+        "publish_date": "2022-12-26",
+        "text": {
+          "good_points": "Light to hold\nBattery life is amazing",
+          "bad_points": "Nothing"
+        },
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 10.0 },
+          { "name": "Overall rating", "score": 10.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 36664301,
+        "supplementary_info": null,
+        "overall_score": 9,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Muzzi",
+          "location": "Sheffield",
+          "segment": "Business user"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-09-09",
+        "publish_date": "2022-12-24",
+        "text": {
+          "good_points": "Brilliant performance \n\nBetter battery life than a windows",
+          "bad_points": "Having to buy separate attachments or plug ins"
+        },
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 9.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 9.0 },
+          { "name": "Value for money", "score": 9.0 },
+          { "name": "Overall rating", "score": 9.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 36643316,
+        "supplementary_info": null,
+        "overall_score": 9,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Lucas",
+          "location": "Ashbourne",
+          "segment": "Creative"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-11-25",
+        "publish_date": "2022-12-23",
+        "text": {
+          "good_points": "Great battery, size, weight, performance and screen",
+          "bad_points": "Why there is only usb C on one side, I’ll never know . It means the charger has to go right around the back of the laptop and make it irritating if using on your knees . Unlike the old MacBooks and now the new ones, it’s not mag safe which makes the reach around charger more annoying and arguably wearing on the cables ."
+        },
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 8.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 9.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 7.0 },
+          { "name": "Overall rating", "score": 9.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 36604679,
+        "supplementary_info": null,
+        "overall_score": 1,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": { "name": "Katya", "location": null, "segment": null },
+        "fast_responses": [],
+        "purchase_date": "2022-11-21",
+        "publish_date": "2022-12-21",
+        "text": {
+          "good_points": null,
+          "bad_points": "Mouse pad doesn't work, screen goes black and glitches"
+        },
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 1.0 },
+          { "name": "Battery life", "score": 1.0 },
+          { "name": "Size and weight", "score": 1.0 },
+          { "name": "Performance", "score": 1.0 },
+          { "name": "Value for money", "score": 1.0 },
+          { "name": "Overall rating", "score": 1.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 36592201,
+        "supplementary_info": null,
+        "overall_score": 10,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Gina",
+          "location": null,
+          "segment": "General home user"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-11-18",
+        "publish_date": "2022-12-20",
+        "text": {
+          "good_points": "Super lightweight and does everything it needs to",
+          "bad_points": null
+        },
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 10.0 },
+          { "name": "Overall rating", "score": 10.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      }
+    ],
+    "pagination": {
+      "total_entries": 3636,
+      "total_entries_with_content": 1830,
+      "current_page": 1,
+      "total_pages": 364,
+      "per_page": 10,
+      "previous_page": null,
+      "next_page": 2
+    }
+  },
+  "translations": {
+    "vote_response": "Thanks! Your vote will be counted and will help others decide.",
+    "vote_failure": "Sorry, we can’t take your vote right now. Please try again later.",
+    "pagination": {
+      "first": "&laquo; First",
+      "last": "Last &raquo;",
+      "next": "Next &rsaquo;",
+      "previous": "&lsaquo; Prev",
+      "truncate": "&hellip;"
+    },
+    "show_scores": "Show scores",
+    "hide_scores": "Hide scores",
+    "published_on": "Published on:",
+    "no_comment": "Reviewer left no comment",
+    "out_of": "out of 10",
+    "multi_country": "You can also see %{reviews_number} Multi-country reviews",
+    "read_more": "Read More",
+    "see_less": "See Less",
+    "see_older_reviews": "See older reviews of Apple 13.3\" MacBook Air with Retina Display (2020) - Intel Core i3, 256 GB SSD, Space Grey",
+    "see_newer_reviews": "See recent reviews of Apple 13.3\" MacBook Air with Retina Display (2020) - Intel Core i3, 256 GB SSD, Space Grey",
+    "translate": "Translate",
+    "show_original": "Show Original",
+    "no_reviews": "Sorry, there are no reviews yet.",
+    "share_text": "Check out these reviews",
+    "paste_this_into_your_email": "Paste this into your email or IM",
+    "share_dialog": "Share Dialog",
+    "search_no_reviews": "Sorry, we can’t find any reviews that match with your search. You can check out other reviews for this product below."
+  },
+  "about_reevoo": null,
+  "facets_by_segment": [
+    {
+      "name": "All purchasers",
+      "facets": [
+        { "name": "Design", "score": 9.6 },
+        { "name": "Battery life", "score": 9.3 },
+        { "name": "Size and weight", "score": 9.6 },
+        { "name": "Performance", "score": 9.4 },
+        { "name": "Value for money", "score": 8.6 },
+        { "name": "Overall rating", "score": 9.4 }
+      ]
+    },
+    {
+      "name": "Business user",
+      "facets": [
+        { "name": "Design", "score": 9.6 },
+        { "name": "Battery life", "score": 9.4 },
+        { "name": "Size and weight", "score": 9.6 },
+        { "name": "Performance", "score": 9.4 },
+        { "name": "Value for money", "score": 8.5 },
+        { "name": "Overall rating", "score": 9.3 }
+      ]
+    },
+    {
+      "name": "Creative",
+      "facets": [
+        { "name": "Design", "score": 9.7 },
+        { "name": "Battery life", "score": 9.4 },
+        { "name": "Size and weight", "score": 9.7 },
+        { "name": "Performance", "score": 9.6 },
+        { "name": "Value for money", "score": 8.7 },
+        { "name": "Overall rating", "score": 9.6 }
+      ]
+    },
+    {
+      "name": "Gamer",
+      "facets": [
+        { "name": "Design", "score": 9.5 },
+        { "name": "Battery life", "score": 9.4 },
+        { "name": "Size and weight", "score": 9.9 },
+        { "name": "Performance", "score": 9.6 },
+        { "name": "Value for money", "score": 9.3 },
+        { "name": "Overall rating", "score": 9.3 }
+      ]
+    },
+    {
+      "name": "General home user",
+      "facets": [
+        { "name": "Design", "score": 9.6 },
+        { "name": "Battery life", "score": 9.3 },
+        { "name": "Size and weight", "score": 9.6 },
+        { "name": "Performance", "score": 9.5 },
+        { "name": "Value for money", "score": 8.6 },
+        { "name": "Overall rating", "score": 9.4 }
+      ]
+    },
+    {
+      "name": "Student",
+      "facets": [
+        { "name": "Design", "score": 9.6 },
+        { "name": "Battery life", "score": 9.3 },
+        { "name": "Size and weight", "score": 9.6 },
+        { "name": "Performance", "score": 9.5 },
+        { "name": "Value for money", "score": 8.6 },
+        { "name": "Overall rating", "score": 9.5 }
+      ]
+    },
+    {
+      "name": "Other",
+      "facets": [
+        { "name": "Design", "score": 9.3 },
+        { "name": "Battery life", "score": 8.9 },
+        { "name": "Size and weight", "score": 9.2 },
+        { "name": "Performance", "score": 9.2 },
+        { "name": "Value for money", "score": 8.2 },
+        { "name": "Overall rating", "score": 9.0 }
+      ]
+    }
+  ]
+}

@@ -12,6 +12,7 @@ def get_scrapper(url: str):
     from .amazon import AmazonScrapper
     from .argos import Argos
     from .flipkart import Flipkart
+    from .currys import Curry
 
     # Extract the market place from the url e.g. amazon, ebay, flipkart etc
     market_place = Scrapper.get_base_url(url).split(".")[1]
@@ -20,6 +21,7 @@ def get_scrapper(url: str):
         MarketPlace.AMAZON: AmazonScrapper,
         MarketPlace.ARGOS: Argos,
         MarketPlace.FLIPKART: Flipkart,
+        MarketPlace.CURRYS: Curry,
     }
 
     return scrappers.get(market_place, None)
@@ -27,13 +29,6 @@ def get_scrapper(url: str):
 @dataclasses.dataclass
 class Scrapper:
     """Base class for scrapping data from web pages"""
-
-    AMAZON = MarketPlace.AMAZON
-    EBAY = MarketPlace.EBAY
-    WALMART = MarketPlace.WALMART
-    FLIPKART = MarketPlace.FLIPKART
-    ARGOS = MarketPlace.ARGOS
-
 
     url: str
     soup: bs4.BeautifulSoup = dataclasses.field(init=False)

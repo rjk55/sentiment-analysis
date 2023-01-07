@@ -1,0 +1,488 @@
+{
+  "configuration": {
+    "show_brand": true,
+    "show_footer": true,
+    "show_older_reviews": true,
+    "show_demographic_info": true,
+    "helpfulness_voting": "/reevoomark/votes/en-GB/---id---?vote=---vote---",
+    "multi_country_region_is_available": false,
+    "current_region_is_multi_country": false,
+    "older_reviews_available": false,
+    "flags_enabled": true,
+    "social_enabled": true,
+    "stars_enabled": true,
+    "stars_in_facets": false,
+    "scores_in_facets": true
+  },
+  "header": {
+    "title": "APPLE MacBook Air 13.6\" (2022) - M2, 256 GB SSD, Starlight reviews verified by <span class='reevoo-name'>reevoo</span><reevoo-quotes/>",
+    "product_image": "https://images.reevoo.com/retailer_products/1193592/1193592597/130x130.jpg?fingerprint=cd51cc1682308109801d59f7d67509681cac9723",
+    "show_product_image": false,
+    "num_of_reviews": "42 reviews",
+    "average_score": "9.0",
+    "facets": [
+      { "name": "Design", "score": 9.4 },
+      { "name": "Battery life", "score": 9.3 },
+      { "name": "Size and weight", "score": 9.4 },
+      { "name": "Performance", "score": 9.2 },
+      { "name": "Value for money", "score": 7.9 },
+      { "name": "Overall rating", "score": 9.0 }
+    ],
+    "slider_facets": [],
+    "region_list": [["My country and language (42 reviews)", "my-locale"]]
+  },
+  "body": {
+    "filter_bar": {
+      "show_scores": {
+        "show_text": "Show all scores",
+        "hide_text": "Hide all scores"
+      },
+      "filters_text": "Reviews from:",
+      "filter_all": "All purchasers",
+      "filters": [
+        ["Business user", "business-user"],
+        ["Creative", "creative"],
+        ["Gamer", "gamer"],
+        ["General home user", "general-home-user"],
+        ["Student", "student"],
+        ["other", "other"]
+      ],
+      "sort_text": "Sort by:",
+      "sorters": [
+        ["My language first", "language"],
+        ["Most recent", "recent"],
+        ["Most helpful", "helpful"],
+        ["Lowest score", "score_asc"],
+        ["Highest score", "score_desc"]
+      ],
+      "default_sorter": "language"
+    },
+    "reviews": [
+      {
+        "id": 36305871,
+        "supplementary_info": null,
+        "overall_score": 10,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Carla",
+          "location": null,
+          "segment": "Creative"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-10-31",
+        "publish_date": "2022-12-02",
+        "text": null,
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 8.0 },
+          { "name": "Overall rating", "score": 10.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 36245260,
+        "supplementary_info": null,
+        "overall_score": 10,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Libby",
+          "location": "Lee",
+          "segment": "General home user"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-10-31",
+        "publish_date": "2022-11-28",
+        "text": null,
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 10.0 },
+          { "name": "Overall rating", "score": 10.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 35713349,
+        "supplementary_info": null,
+        "overall_score": 10,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Faith",
+          "location": null,
+          "segment": "General home user"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-09-29",
+        "publish_date": "2022-10-27",
+        "text": null,
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 10.0 },
+          { "name": "Overall rating", "score": 10.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 35694009,
+        "supplementary_info": null,
+        "overall_score": 10,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": { "name": null, "location": null, "segment": "Student" },
+        "fast_responses": [],
+        "purchase_date": "2022-09-28",
+        "publish_date": "2022-10-26",
+        "text": null,
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 10.0 },
+          { "name": "Overall rating", "score": 10.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 35676764,
+        "supplementary_info": null,
+        "overall_score": 10,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Alyshia",
+          "location": "Abergavenny",
+          "segment": "Student"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-09-26",
+        "publish_date": "2022-10-24",
+        "text": null,
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 9.0 },
+          { "name": "Size and weight", "score": 9.0 },
+          { "name": "Performance", "score": 9.0 },
+          { "name": "Value for money", "score": 8.0 },
+          { "name": "Overall rating", "score": 10.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 35567103,
+        "supplementary_info": null,
+        "overall_score": 9,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Phil",
+          "location": "Chesterfield",
+          "segment": "Business user"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-09-07",
+        "publish_date": "2022-10-09",
+        "text": null,
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 9.0 },
+          { "name": "Battery life", "score": 9.0 },
+          { "name": "Size and weight", "score": 9.0 },
+          { "name": "Performance", "score": 9.0 },
+          { "name": "Value for money", "score": 8.0 },
+          { "name": "Overall rating", "score": 9.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 35536111,
+        "supplementary_info": null,
+        "overall_score": 10,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": { "name": "Ian", "location": null, "segment": "Student" },
+        "fast_responses": [],
+        "purchase_date": "2022-09-06",
+        "publish_date": "2022-10-04",
+        "text": null,
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 10.0 },
+          { "name": "Overall rating", "score": 10.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 35506787,
+        "supplementary_info": null,
+        "overall_score": 8,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Caryn",
+          "location": null,
+          "segment": "General home user"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-09-02",
+        "publish_date": "2022-09-30",
+        "text": null,
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 8.0 },
+          { "name": "Battery life", "score": 9.0 },
+          { "name": "Size and weight", "score": 8.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 4.0 },
+          { "name": "Overall rating", "score": 8.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 35473475,
+        "supplementary_info": null,
+        "overall_score": 9,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": {
+          "name": "Andrew",
+          "location": "Greenwich",
+          "segment": "Student"
+        },
+        "fast_responses": [],
+        "purchase_date": "2022-08-30",
+        "publish_date": "2022-09-27",
+        "text": null,
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 9.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 8.0 },
+          { "name": "Overall rating", "score": 9.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      },
+      {
+        "id": 35465535,
+        "supplementary_info": null,
+        "overall_score": 10,
+        "embeddable": false,
+        "locale": "en-GB",
+        "language": "en",
+        "reviewer": { "name": "John", "location": null, "segment": "Student" },
+        "fast_responses": [],
+        "purchase_date": "2022-08-29",
+        "publish_date": "2022-09-26",
+        "text": null,
+        "photos": [],
+        "facets": [
+          { "name": "Design", "score": 10.0 },
+          { "name": "Battery life", "score": 10.0 },
+          { "name": "Size and weight", "score": 10.0 },
+          { "name": "Performance", "score": 10.0 },
+          { "name": "Value for money", "score": 10.0 },
+          { "name": "Overall rating", "score": 10.0 }
+        ],
+        "slider_facets": [],
+        "launch_review": false,
+        "translations": {
+          "verified_purchase": "Confirmed purchase:",
+          "launch_review": "This reviewer was invited to try the product in exchange for their honest opinion"
+        }
+      }
+    ],
+    "pagination": {
+      "total_entries": 42,
+      "total_entries_with_content": 22,
+      "current_page": 4,
+      "total_pages": 5,
+      "per_page": 10,
+      "previous_page": 3,
+      "next_page": 5
+    }
+  },
+  "translations": {
+    "vote_response": "Thanks! Your vote will be counted and will help others decide.",
+    "vote_failure": "Sorry, we can’t take your vote right now. Please try again later.",
+    "pagination": {
+      "first": "&laquo; First",
+      "last": "Last &raquo;",
+      "next": "Next &rsaquo;",
+      "previous": "&lsaquo; Prev",
+      "truncate": "&hellip;"
+    },
+    "show_scores": "Show scores",
+    "hide_scores": "Hide scores",
+    "published_on": "Published on:",
+    "no_comment": "Reviewer left no comment",
+    "out_of": "out of 10",
+    "multi_country": "You can also see %{reviews_number} Multi-country reviews",
+    "read_more": "Read More",
+    "see_less": "See Less",
+    "see_older_reviews": "See older reviews of APPLE MacBook Air 13.6\" (2022) - M2, 256 GB SSD, Starlight",
+    "see_newer_reviews": "See recent reviews of APPLE MacBook Air 13.6\" (2022) - M2, 256 GB SSD, Starlight",
+    "translate": "Translate",
+    "show_original": "Show Original",
+    "no_reviews": "Sorry, there are no reviews yet.",
+    "share_text": "Check out these reviews",
+    "paste_this_into_your_email": "Paste this into your email or IM",
+    "share_dialog": "Share Dialog",
+    "search_no_reviews": "Sorry, we can’t find any reviews that match with your search. You can check out other reviews for this product below."
+  },
+  "about_reevoo": null,
+  "facets_by_segment": [
+    {
+      "name": "All purchasers",
+      "facets": [
+        { "name": "Design", "score": 9.4 },
+        { "name": "Battery life", "score": 9.3 },
+        { "name": "Size and weight", "score": 9.4 },
+        { "name": "Performance", "score": 9.2 },
+        { "name": "Value for money", "score": 7.9 },
+        { "name": "Overall rating", "score": 9.0 }
+      ]
+    },
+    {
+      "name": "Business user",
+      "facets": [
+        { "name": "Design", "score": 9.4 },
+        { "name": "Battery life", "score": 9.3 },
+        { "name": "Size and weight", "score": 9.5 },
+        { "name": "Performance", "score": 8.9 },
+        { "name": "Value for money", "score": 7.6 },
+        { "name": "Overall rating", "score": 8.6 }
+      ]
+    },
+    {
+      "name": "Creative",
+      "facets": [
+        { "name": "Design", "score": 10.0 },
+        { "name": "Battery life", "score": 10.0 },
+        { "name": "Size and weight", "score": 10.0 },
+        { "name": "Performance", "score": 10.0 },
+        { "name": "Value for money", "score": 8.0 },
+        { "name": "Overall rating", "score": 10.0 }
+      ]
+    },
+    {
+      "name": "Gamer",
+      "facets": [
+        { "name": "Design", "score": 10.0 },
+        { "name": "Battery life", "score": 10.0 },
+        { "name": "Size and weight", "score": 10.0 },
+        { "name": "Performance", "score": 10.0 },
+        { "name": "Value for money", "score": 10.0 },
+        { "name": "Overall rating", "score": 10.0 }
+      ]
+    },
+    {
+      "name": "General home user",
+      "facets": [
+        { "name": "Design", "score": 9.5 },
+        { "name": "Battery life", "score": 9.6 },
+        { "name": "Size and weight", "score": 9.5 },
+        { "name": "Performance", "score": 9.5 },
+        { "name": "Value for money", "score": 8.0 },
+        { "name": "Overall rating", "score": 9.2 }
+      ]
+    },
+    {
+      "name": "Student",
+      "facets": [
+        { "name": "Design", "score": 8.9 },
+        { "name": "Battery life", "score": 8.5 },
+        { "name": "Size and weight", "score": 8.8 },
+        { "name": "Performance", "score": 8.7 },
+        { "name": "Value for money", "score": 7.7 },
+        { "name": "Overall rating", "score": 8.8 }
+      ]
+    },
+    {
+      "name": "Other",
+      "facets": [
+        { "name": "Design", "score": 10.0 },
+        { "name": "Battery life", "score": 10.0 },
+        { "name": "Size and weight", "score": 10.0 },
+        { "name": "Performance", "score": 10.0 },
+        { "name": "Value for money", "score": 8.0 },
+        { "name": "Overall rating", "score": 8.5 }
+      ]
+    }
+  ]
+}

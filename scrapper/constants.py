@@ -5,5 +5,6 @@ class MarketPlace:
     WALMART = "walmart"
     FLIPKART = "flipkart"
     ARGOS = "argos"
+    CURRYS = "currys"
 
     

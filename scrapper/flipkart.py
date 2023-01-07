@@ -55,7 +55,6 @@ class Flipkart(Scrapper):
     def get_all_reviews(self):
         """Returns all the reviews."""
         all_reviews_page_url = self.get_all_reviews_page_url()
-        # print("all_reviews_page_url", all_reviews_page_url)
         soup = self.get_soup(all_reviews_page_url)
         number_of_pages = self.get_number_of_pages(soup)
 
