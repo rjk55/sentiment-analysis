@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 </head>
 
 <body>
@@ -31,9 +35,16 @@
             <div class="loader-section hidden">
                 <h1 class="text-4xl font-bold">Running the analysis in realtime</h1>
                 <p class="text-xs text-gray-500 text-center">Please wait...</p>
-                <div
-                    class="loader ease-linear rounded-full border-2 border-t-2 border-gray-200 h-8 w-8 my-4 text-center">
+                <div class="flex justify-center items-center">
+                    <div
+                        class="loader ease-linear rounded-full border-2 border-t-2 border-gray-200 h-8 w-8 my-4 text-center">
+                    </div>
                 </div>
+
+
+
+            </div>
+            <div id="product-section" class="w-1/2">
 
             </div>
 
@@ -73,12 +84,80 @@
             const loader = document.querySelector('.loader-section');
             const main = document.querySelector('.main');
             const form = document.querySelector('form');
+            const productSectionEl = document.querySelector('#product-section');
 
-            // form.addEventListener('submit', (e) => {
-            //     e.preventDefault();
-            //     loader.classList.remove('hidden');
-            //     main.classList.add('hidden');
-            // })
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                loader.classList.remove('hidden');
+                main.classList.add('hidden');
+
+                const urlValue = url.value;
+                const csrftoken = getCookie('csrftoken');
+
+                fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': csrftoken,
+                    },
+                    body: JSON.stringify({
+                        url: urlValue
+                    })
+                }).then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        loader.classList.add('hidden');
+                        const sentiment = data.sentiment;
+                        const { name, price } = data.product_detail;
+                        url.value = '';
+
+                        let recommendationText = ""
+                        const negative = sentiment[1];
+                        const positive = sentiment[0];
+
+                        if (negative < 20) {
+                            recommendationText = `The product has a very good sentiment. You can go ahead and buy it.`
+                        } else if (negative < 40 && negative > 20) {
+                            recommendationText = `The product has a mixed sentiment. You can consider buying it.`
+
+                        } else {
+                            recommendationText = `The product has a bad sentiment. You should not buy it.`
+                        }
+
+
+
+                        productSectionEl.innerHTML = `
+                        <div>
+                            <p>Product Name: ${name}</p>
+                            <p>Price: ${price ? price : "Not Available"}</p>
+                        </div>
+                        <br />
+                        <canvas id="myChart"></canvas>
+                        <br />
+                        <p class=bg-purple-300 p-2">${recommendationText}</p>
+                        `;
+
+                        const ctx = document.getElementById('myChart');
+                        new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['Positive', 'Negative', 'Neutral',],
+                                datasets: [{
+                                    label: 'Sentiment in %',
+                                    data: sentiment,
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        });
+                    })
+            })
 
 
             // JavaScript function to get cookie by name; retrieved from https://docs.djangoproject.com/en/3.1/ref/csrf/
