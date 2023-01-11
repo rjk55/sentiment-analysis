@@ -113,10 +113,14 @@
 
                         if (negative < 20) {
                             recommendationText = `The product has a very good sentiment. You can go ahead and buy it.`
-                        } else if (negative < 40 && negative > 20) {
+                        }
+                        else if (negative < 40 && negative > 20) {
                             recommendationText = `The product has a mixed sentiment. You can consider buying it.`
-
-                        } else {
+                        }
+                        else if (positive < 50 && negative < 20) {
+                            recommendationText = `The product has a mixed sentiment. You can consider buying it.`
+                        }
+                        else {
                             recommendationText = `The product has a bad sentiment. You should not buy it.`
                         }
 
