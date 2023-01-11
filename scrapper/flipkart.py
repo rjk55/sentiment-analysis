@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 @dataclass
 class Flipkart(Scrapper):
     def __post_init__(self):
-        logger.info("AmazonScrapper initialized.")
+        logger.info("FlipkartScrapper initialized.")
         self.soup = self.get_soup(self.url)
 
     def get_product_details(self):
