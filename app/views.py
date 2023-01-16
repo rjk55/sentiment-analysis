@@ -17,9 +17,10 @@ class EnterProductURLView(View):
 
     def post(self, request):
         body_unicode = request.body.decode('utf-8')
-        received_json = json.loads(body_unicode)
+        # received_json = json.loads(body_unicode)
 
-        url = received_json["url"]
+        # url = received_json["url"]
+        url = "http://localhost:8080/currys"
 
         logger.info("Received URL: %s", url)
         

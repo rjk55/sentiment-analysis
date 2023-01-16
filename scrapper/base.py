@@ -15,7 +15,7 @@ def get_scrapper(url: str):
     from .currys import Curry
 
     # Extract the market place from the url e.g. amazon, ebay, flipkart etc
-    market_place = Scrapper.get_base_url(url).split(".")[1]
+    # market_place = Scrapper.get_base_url(url).split(".")[1]
 
     scrappers = {
         MarketPlace.AMAZON: AmazonScrapper,
@@ -24,6 +24,7 @@ def get_scrapper(url: str):
         MarketPlace.CURRYS: Curry,
     }
 
+    return scrappers.get(MarketPlace.CURRYS, None)
     return scrappers.get(market_place, None)
 
 @dataclasses.dataclass
