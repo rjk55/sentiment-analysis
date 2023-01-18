@@ -55,6 +55,8 @@ python manage.py test
 - [Pandas](https://pandas.pydata.org/) - Data analysis
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Web scraping
 - [NLTK](https://www.nltk.org/) - Natural Language Processing
+- [Requests](https://requests.readthedocs.io/en/master/) - HTTP requests
+- [TextBlob](https://textblob.readthedocs.io/en/dev/) - Text processing
 - [Chart.js](https://www.chartjs.org/) - Data visualization
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 
