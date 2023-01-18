@@ -120,6 +120,9 @@ def analyze_polarity(reviews:List[dict]) -> Tuple[float, float, float, float]:
     # Get sentiment score where authenticity is True
     sentiment_score = df[df["Authenticity"] == True]["Sentiment Score"].to_list()
 
+    fake_reviews = df[df["Authenticity"] == False]
+    # print(f"Fake reviews: {fake_reviews}")
+
     # total number of reviews
     total = len(sentiment_score)
 
